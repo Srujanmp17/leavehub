@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/table" method="post">
+        <h1>Employee Login Details</h1>
+        <table border="2" cellspacing="4" cellpadding="5">
+            <tr>
+                <th>id</th>
+                <th>Employee_Name</th>
+                <th>Department</th>
+                <th>Phone_Number</th>
+                <th>Email</th>
+                <th>Reason for Leave:</th>
+                <th>Approve</th>
+                <th>Decline</th>
+            </tr>
+            {% for data in Empleave%}
+            <tr>
+                <td>{{data.id}}</td>
+                <td>{{data.Employee_Name}}</td>
+                <td>{{data.Department}}</td>
+                <td>{{data.Phone_Number}}</td>
+                <td>{{data.Email}}</td>
+                <td>{{data.emergencyLeave}}</td>
+                <td>{{data.annualLeave}}</td>
+                <td>{{data.sickLeave}}</td>
+                <td>{{data.maternityLeave}}</td>
+                <td>{{data.otherLeave}}</td>
+                <td><button id="approveButton" class="btn approve">Approve</button></td>
+                <td><button id="declineButton" class="btn decline">Decline</button></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </form>
+    
+    <br><br>
+</body>
+</html>

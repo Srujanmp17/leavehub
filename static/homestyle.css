@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* padding: 4%; */
+    font-family:'Times New Roman', Times, serif;
+  }
+  
+  #navbar {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:  #000000;
+    z-index: 1000;
+    height:120px;
+  }
+  
+  #navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+  }
+  
+  #navbar ul li {
+    margin: 0 15px;
+  }
+  
+  #navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: -10px;
+    display: block;
+    transition: background-color 0.3s;
+    margin-right: 50px;
+    margin-top: -30px;
+  }
+  
+  #navbar ul li a:target, #navbar ul li a:hover {
+    background-color: #ec6319;
+  }
+  
+  .section {
+    height: 70vh;
+    margin-top: 120px;
+    padding: 110px;
+    /* border-bottom: 1px solid #ddd; */
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+  }
+  
+  h2 {
+    margin: 0;
+  }
+  
+  /* Highlight section when targeted */
+  .section:target {
+    background-color: #f4f4f4;
+    transition: background-color 0.3s;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  .content{
+    padding-bottom: 10%;
+    display:block;
+    justify-content:flex-start;
+    text-align: justify;
+  }
+
+  p .home1 {
+    line-height-step: 1%;
+    line-break: normal;
+  }
+  
+/* .footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  font-size: 14px;
+} */
+
+/* Responsive Design */
+/* @media (max-width: 120px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    margin-bottom: 30px;
+  } */
+
+h5{
+  
+  line-height: 0%;
+}
+
+.container {
+  display:flex;  /* Flexbox layout */
+  /* justify-content: space-between; Spaces the columns evenly */
+  align-items: right; /* Vertically aligns content to the center */
+  width:100%;
+  height: 80%; /* Full viewport height */
+  padding: 15px;
+  gap: 0px; /* Adds spacing between columns */
+ 
+}
+.column {
+  flex: 1; /* Each column takes up equal space */
+}
+
+
+.image-column img {
+  /* max-width: 100%; Ensures the image fits the column */
+  /* height: auto; Maintains image aspect ratio */
+  width:80%;
+  height:70%;
+  position:relative;
+  margin-left :30%;
+  
+}
+
+/* Style the content column */
+.content-column {
+  padding: 2px; /* Adds some padding to the text */
+  font-family: Arial, sans-serif;
+  color: #000000;
+}
+
+.content-column1{
+  padding: 2px; /* Adds some padding to the text */
+  font-family: Arial, sans-serif;
+  color: #000000;
+}

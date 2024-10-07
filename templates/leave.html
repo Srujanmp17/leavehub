@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            text-align: center;
+            color:#ff8000;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px 0;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group-inline {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-group-inline .form-group {
+            width: 48%;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff8000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <form action="/request" method="POST">
+        <div class="form-container">
+            <h2>Leave Application Form</h2>
+            <form>
+                <div class="form-group">
+                    <label for="Employee_Name">Applicant Name</label>
+                    <input type="text" id="Employee_Name" placeholder="Full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department">
+                        <option value="Production">Production</option>
+                        <option value="Production">Software Dev</option>
+                        <option value="Production">Cloud Dev</option>
+                        <option value="Production">IT</option>
+                        <option value="Production">Sales</option>
+                        <option value="Production">Executive</option>
+                        
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Phone_Number">Phone</label>
+                    <input type="tel" id="Phone_Number" placeholder="#### ### ###">
+                </div>
+                <div class="form-group">
+                    <label for="Employee_Email">Email</label>
+                    <input type="email" id="Employee_Email" placeholder="example@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Reason for Leave:<br></label>
+                    <label for="emergencyLeave">Emergency Leave</label>
+                    <input type="radio" id="emergencyLeave" name="leaveType" value="annual">
+                    <label for="annualLeave">Annual Leave</label>
+                    <input type="radio" id="annualLeave" name="leaveType" value="other">
+                    <label for="sickLeave">Sick Leave</label>
+                    <input type="radio" id="sickLeave" name="leaveType" value="sick">
+                    <label for="maternityLeave">Maternity Leave</label>
+                    <input type="radio" id="maternityLeave" name="leaveType" value="maternity">
+                    <label for="otherLeave">Other</label>
+                    <input type="radio" id="otherLeave" name="leaveType" value="other">
+                </div>
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="startDate">First day of absence</label>
+                        <input type="date" id="startDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endDate">Last day of absence</label>
+                        <input type="date" id="endDate" required>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+    </form>
+    <a href="/appdecs"><button type="submit">Submit Application</button></a>
+</body>
+</html>

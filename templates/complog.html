@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            width: 350px;
+            text-align: center;
+        }
+        .container h1 {
+            color: #FF7F00;
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+        }
+        input::placeholder {
+            color: #ccc;
+        }
+        button {
+            background-color: #FF7F00;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #e76a00;
+        }
+        .login {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #ccc;
+        }
+        .login a {
+            color: #FF7F00;
+            text-decoration: none;
+        }
+        .login a:hover {
+            text-decoration: underline;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="/static/logo.png" alt="Leave Hub Logo">
+        </div>
+        <h1>Log In As Company</h1>
+        <form action="/complog" method="POST">
+            <input type="text" name="Company Name" placeholder="Company Name" >
+            <input type="password" name="Passkey" placeholder="Passkey" ><br>
+            <a href="/comprof"><button  type="submit" align="center">Log In</button></a>
+        </form>
+    </div>
+</body>
+</html>
+
+

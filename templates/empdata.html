@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/empinfo" method="post">
+        <h1>Employee Details</h1>
+        <table border="2" cellspacing="4" cellpadding="5">
+            <tr>
+                <th>id</th>
+                <th>Employee_Name</th>
+                <th>Employee_Email</th>
+                <th>Phone_number</th>
+                <th>Password</th>
+                <th>Company_Passkey</th>
+                
+            </tr>
+            {% for data in EmpUser%}
+            <tr>
+                <td>{{data.id}}</td>
+                <td>{{data.Employee_Name}}</td>
+                <td>{{data.Employee_Email}}</td>
+                <td>{{data.Phone_number}}</td>
+                <td>{{data.Password}}</td>
+                <td>{{data.Company_Passkey}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    
+    </form>
+    
+    <br><br>
+</body>
+</html>

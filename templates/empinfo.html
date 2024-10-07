@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        .employee-table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        .employee-table th {
+            background-color: #ffa500; /* light orange */
+            color: #000; /* black */
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .employee-table th:first-child {
+            border-top-left-radius: 8px;
+        }
+
+        .employee-table th:last-child {
+            border-top-right-radius: 8px;
+        }
+
+        .employee-table tr th {
+            border-bottom: 2px solid #333; /* black */
+        }
+    </style>
+</head>
+<body>
+    <form action="/empinfo" method="POST">
+        <h2>Employee Details</h2>
+
+        <table class="employee-table">
+            <thead>
+                <tr>  
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Srujan</td>
+                    <td>Sruj@gmail.com</td>
+                    <td>1122334455</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Abhivarsha</td>
+                    <td>abhi@gmail.com</td>
+                    <td>15432334455</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Anusha</td>
+                    <td>anu@gmail.com</td>
+                    <td>7411307228</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Gowthami</td>
+                    <td>gow@gmail.com</td>
+                    <td>7411311228</td>
+                </tr>
+                <tr>
+                    {% for data in EmpInfo %}
+                    <td>{{data.id}}</td>
+                    <td>{{data.Employee_Name}}</td>
+                    <td>{{data.Employee_Email}}</td>
+                    <td>{{data.Phone_Number}}</td>
+                    
+                </tr>
+                {% endfor %}
+            </thead>
+        </table>
+</form>
+</body>
+</html>
